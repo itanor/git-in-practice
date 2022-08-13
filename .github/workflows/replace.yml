@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: sandersaares-actions/expand-tokens@master
+      env:
+        versionstring: 1.2.3.4
+        best_day_of_week: friday
+        secret_ingredient: ${{ secrets.SECRET_INGREDIENT }}
+      with:
+        path: test-github-action-replacement.txt
+        recursive: true
+    - name: Print fresh content
+      run: cat test-github-action-replacement.txt

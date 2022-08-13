@@ -1,0 +1,2 @@
+In version __versionstring__ the best day of the week was __best_day_of_week__. 
+The secret ingredient is __secret_ingredient__.
